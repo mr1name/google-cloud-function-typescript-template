@@ -1,0 +1,24 @@
+{
+  "name": "google-cloud-function-typescript-template",
+  "version": "0.0.1",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "files": [
+    "dist/src"
+  ],
+  "keywords": [],
+  "scripts": {
+    "clean": "rm -rf dist index.js",
+    "build": "npm run clean && tsc && echo \"Object.entries(require('./dist')).forEach(e => exports[e[0]] = e[1]);\" >> index.js",
+    "gcp-build": "npm run build",
+    "start": "functions-framework --target=$FN",
+    "watch": "tsc-watch --onSuccess 'npm run start'"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^1.9.0",
+    "@types/express": "^4.17.13",
+    "@types/node": "^14.11.2",
+    "tsc-watch": "^4.4.0",
+    "typescript": "^4.0.3"
+  }
+}
