@@ -1,6 +1,6 @@
 # google-cloud-function-typescript-template
 
-A simple template with a minimum of dependencies to create Google Cloud Functions using Typescript.
+A simple template with a minimum of dependencies for creating Google Cloud Functions using Typescript.
 
 ## Local development
 
